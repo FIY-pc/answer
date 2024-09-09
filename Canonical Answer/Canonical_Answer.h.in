@@ -1,0 +1,13 @@
+#ifndef CANONICAL_ANSWER_CANONICAL_ANSWER_H
+#define CANONICAL_ANSWER_CANONICAL_ANSWER_H
+
+#endif //CANONICAL_ANSWER_CANONICAL_ANSWER_H
+
+#define Canonical_Answer_VERSION_MAJOR @PROJECT_VERSION_MAJOR@
+#define Canonical_Answer_VERSION_MINOR @PROJECT_VERSION_MINOR@
+#define Canonical_Answer_VERSION_PATCH @PROJECT_VERSION_PATCH@
+
+#include <stdio.h>
+void version(){
+    printf("当前版本：%d.%d.%d",Canonical_Answer_VERSION_MAJOR,Canonical_Answer_VERSION_MINOR,Canonical_Answer_VERSION_PATCH);
+}
