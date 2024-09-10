@@ -1,0 +1,12 @@
+#ifndef CANONICAL_ANSWER_CONFIG_H
+#define CANONICAL_ANSWER_CONFIG_H
+
+#endif //CANONICAL_ANSWER_CONFIG_H
+
+//Config
+
+#define NAME "自助售货机"
+#define WIDTH 4
+#define HEIGHT 5
+#define LANES WIDTH*HEIGHT
+#define SECRET_PASSWORD 123456

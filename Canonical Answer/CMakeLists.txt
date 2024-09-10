@@ -10,11 +10,15 @@ set(CMAKE_C_STANDARD 11)
 set(PROJECT_VERSION_MAJOR 1)
 set(PROJECT_VERSION_MINOR 0)
 set(PROJECT_VERSION_PATCH 0)
-configure_file(${CMAKE_CURRENT_SOURCE_DIR}/Canonical_Answer.h.in ${CMAKE_CURRENT_SOURCE_DIR}/Canonical_Answer.h)
+configure_file(${CMAKE_CURRENT_SOURCE_DIR}/version.h.in ${CMAKE_CURRENT_SOURCE_DIR}/version.h)
 
 add_subdirectory(Functions)
+add_subdirectory(data)
 add_executable(${ProjectId} main.c)
 # 链接Function库
 target_link_libraries(${ProjectId} PUBLIC Functions)
+# 链接data库
+target_link_libraries(${ProjectId} PUBLIC data)
+
 
 

@@ -9,3 +9,4 @@
 
 #include "goods.h"
 #include "screen.h"
+#include "buy/coin_buy.h"

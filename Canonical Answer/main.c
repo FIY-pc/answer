@@ -1,7 +1,8 @@
 #include <stdio.h>
-#include "Canonical_Answer.h"
+#include "version.h"
 #include "Functions.h"
+#include "data_init.h"
 
 int main(){
-
+    goods_add();
 }
