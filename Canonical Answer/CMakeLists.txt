@@ -31,6 +31,9 @@ target_link_libraries(${ProjectId} PUBLIC Functions)
 target_link_libraries(${ProjectId} PUBLIC data)
 # 链接include库
 target_link_libraries(${ProjectId} PUBLIC include)
-
+# 指定输出目录
+set_target_properties(${ProjectId} PROPERTIES
+        RUNTIME_OUTPUT_DIRECTORY "${CMAKE_SOURCE_DIR}"
+)
 
 
