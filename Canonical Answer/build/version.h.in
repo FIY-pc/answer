@@ -1,0 +1,15 @@
+#ifndef CANONICAL_ANSWER_CANONICAL_ANSWER_H
+#define CANONICAL_ANSWER_CANONICAL_ANSWER_H
+
+
+
+#define Canonical_Answer_VERSION_MAJOR @PROJECT_VERSION_MAJOR@
+#define Canonical_Answer_VERSION_MINOR @PROJECT_VERSION_MINOR@
+#define Canonical_Answer_VERSION_PATCH @PROJECT_VERSION_PATCH@
+
+#include <stdio.h>
+void version(){
+    printf("µ±Ç°°æ±¾£º%d.%d.%d\n",Canonical_Answer_VERSION_MAJOR,Canonical_Answer_VERSION_MINOR,Canonical_Answer_VERSION_PATCH);
+}
+
+#endif //CANONICAL_ANSWER_CANONICAL_ANSWER_H
