@@ -253,7 +253,10 @@ Event handleState(State state) {
     }
 }
 
+
+
 int main() {
+    database_exists();
     version();
     State currentState = begin;
     Event event;

@@ -1,12 +1,19 @@
 #include "data.h"
 
+void database_exists(){
+    FILE *db = fopen("./data/database.db","r");
+    if (db == NULL){
+        database_init();
+    }
+}
+
 // 数据库初始化函数
 void database_init(){
 
     sqlite3 *db = NULL;
     char *err_msg = NULL;
     int rc;
-    rc = sqlite3_open("../data/database.db", &db);
+    rc = sqlite3_open("./data/database.db", &db);
     rc_check(db,rc);
 
     // 重置
@@ -42,6 +49,8 @@ void rc_check(sqlite3 *db , int rc){
     } else{
         fprintf(stderr, "SQL error: %s\n", sqlite3_errmsg(db));
         sqlite3_close(db);
+        printf("数据库发生错误!按下回车键退出\n");
+        getchar();
         exit(DATABASE_ERROR);
     }
 }
@@ -52,7 +61,7 @@ void good_update(int lane , char *name , double price , int num){
     sqlite3_stmt *stmt;
 
     const char *sql = "UPDATE goods SET name = ?, price = ?, num = ? WHERE id = ?";
-    int rc = sqlite3_open("../data/database.db", &db);
+    int rc = sqlite3_open("./data/database.db", &db);
     rc_check(db, rc);
 
     rc = sqlite3_prepare_v2(db, sql, -1, &stmt, NULL);
@@ -76,7 +85,7 @@ void good_num_update(int lane,int num){
     sqlite3_stmt *stmt;
 
     const char *sql = "UPDATE goods SET num = ? WHERE id = ?";
-    int rc = sqlite3_open("../data/database.db", &db);
+    int rc = sqlite3_open("./data/database.db", &db);
     rc_check(db, rc);
 
     rc = sqlite3_prepare_v2(db, sql, -1, &stmt, NULL);
@@ -96,7 +105,7 @@ int lane_available_check(int lane){
     sqlite3 *db = NULL;
     char *err_msg = NULL;
     sqlite3_stmt *stmt;
-    int rc = sqlite3_open("../data/database.db", &db);
+    int rc = sqlite3_open("./data/database.db", &db);
     rc_check(db,rc);
 
     char good_sql[50];
@@ -127,7 +136,7 @@ void goods_print_all(){
     sqlite3 *db;
     sqlite3_stmt *stmt;
     char *err_msg = NULL;
-    int rc = sqlite3_open("../data/database.db", &db);
+    int rc = sqlite3_open("./data/database.db", &db);
     rc_check(db,rc);
 
     const char *goods_select_sql = "SELECT id,name,price,num FROM goods";
@@ -159,7 +168,7 @@ void goods_print_one(int lane){
     sqlite3 *db;
     sqlite3_stmt *stmt;
     char *err_msg = NULL;
-    int rc = sqlite3_open("../data/database.db", &db);
+    int rc = sqlite3_open("./data/database.db", &db);
     rc_check(db,rc);
 
     const char *goods_select_sql = "SELECT id,name,price,num FROM goods";
@@ -191,7 +200,7 @@ void goods_fix_information_one(int lane){
     sqlite3 *db;
     sqlite3_stmt *stmt;
     char *err_msg = NULL;
-    int rc = sqlite3_open("../data/database.db", &db);
+    int rc = sqlite3_open("./data/database.db", &db);
     rc_check(db,rc);
 
     const char *goods_select_sql = "SELECT id,name,price,num FROM goods";
@@ -222,7 +231,7 @@ struct goods *return_good_one(int lane){
     sqlite3 *db;
     sqlite3_stmt *stmt;
     char *err_msg = NULL;
-    int rc = sqlite3_open("../data/database.db", &db);
+    int rc = sqlite3_open("./data/database.db", &db);
     rc_check(db,rc);
 
     const char *goods_select_sql = "SELECT name,price,num FROM goods WHERE id = ?";
@@ -250,7 +259,7 @@ double return_price_one(int lane){
     sqlite3 *db;
     sqlite3_stmt *stmt;
     char *err_msg = NULL;
-    int rc = sqlite3_open("../data/database.db", &db);
+    int rc = sqlite3_open("./data/database.db", &db);
     rc_check(db,rc);
 
     const char *goods_select_sql = "SELECT price FROM goods WHERE id = ?";
@@ -274,7 +283,7 @@ char *return_name_one(int lane){
     sqlite3 *db;
     sqlite3_stmt *stmt;
     char *err_msg = NULL;
-    int rc = sqlite3_open("../data/database.db", &db);
+    int rc = sqlite3_open("./data/database.db", &db);
     rc_check(db,rc);
 
     const char *goods_select_sql = "SELECT name FROM goods WHERE id = ?";
@@ -298,7 +307,7 @@ int return_num_one(int lane){
     sqlite3 *db;
     sqlite3_stmt *stmt;
     char *err_msg = NULL;
-    int rc = sqlite3_open("../data/database.db", &db);
+    int rc = sqlite3_open("./data/database.db", &db);
     rc_check(db,rc);
 
     const char *goods_select_sql = "SELECT num FROM goods WHERE id = ?";
@@ -323,7 +332,7 @@ void good_delete_one(int lane){
     sqlite3 *db;
     sqlite3_stmt *stmt;
     char *err_msg = NULL;
-    int rc = sqlite3_open("../data/database.db", &db);
+    int rc = sqlite3_open("./data/database.db", &db);
     rc_check(db,rc);
 
     const char *goods_select_sql = "UPDATE goods SET name = '', price = 0.00, num = 0 WHERE id = ?";

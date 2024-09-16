@@ -9,6 +9,7 @@
 #include <string.h>
 #include "io.h"
 
+void database_exists();
 void database_init();
 void rc_check(sqlite3 *db , int rc);
 

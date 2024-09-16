@@ -1,2 +1,6 @@
 # Auto detect text files and perform LF normalization
 * text=auto
+* text=auto
+*.c text eol=lf encoding=GBK
+*.h text eol=lf encoding=GBK
+*.txt text eol=lf encoding=GBK

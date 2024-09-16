@@ -5,10 +5,9 @@ string(REPLACE " " "_" ProjectId ${ProjectId})
 project(${ProjectId} C)
 # 设置C语言标准
 set(CMAKE_C_STANDARD 17)
-
 # 版本信息
 set(PROJECT_VERSION_MAJOR 1)
-set(PROJECT_VERSION_MINOR 0)
+set(PROJECT_VERSION_MINOR 1)
 set(PROJECT_VERSION_PATCH 0)
 
 # 添加公共头文件

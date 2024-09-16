@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/Canonical Answer/Functions/Functions.h" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/Canonical Answer/Functions/buy.c" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/Canonical Answer/Functions/buy.h" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/Canonical Answer/Functions/goods.c" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/Canonical Answer/Functions/goods.h" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/Canonical Answer/Functions/screen.c" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/Canonical Answer/Functions/screen.h" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/Canonical Answer/Functions/shopping.c" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/Canonical Answer/Functions/shopping.h" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/Canonical Answer/build/CMakeLists.txt" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/Canonical Answer/build/version.h" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/Canonical Answer/build/version.h.in" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/Canonical Answer/data/data.c" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/Canonical Answer/data/data.h" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/Canonical Answer/include/Config.h" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/Canonical Answer/include/io.c" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/Canonical Answer/include/io.h" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/Canonical Answer/src/main.c" charset="GBK" />
+  </component>
+</project>
