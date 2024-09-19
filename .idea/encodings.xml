@@ -19,5 +19,10 @@
     <file url="file://$PROJECT_DIR$/Canonical Answer/include/io.c" charset="GBK" />
     <file url="file://$PROJECT_DIR$/Canonical Answer/include/io.h" charset="GBK" />
     <file url="file://$PROJECT_DIR$/Canonical Answer/src/main.c" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/Test-based-answer/src/level2-2.c" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/Test-based_answers/include/io.c" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/Test-based_answers/include/io.h" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/Test-based_answers/src/level1-1.c" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/Test-based_answers/src/level1-2.c" charset="GBK" />
   </component>
 </project>
