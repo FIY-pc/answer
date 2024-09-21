@@ -2,13 +2,14 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
+#include <windows.h>
 
 void transition(State **head,State **tail,Event event){
     switch (event) {
         case event_next:
             (*tail)++;
             **tail = *(*tail-1);
-            if(*tail-*head == 3){
+            if(*tail-*head == 4){
                 (*head)++;
             }
             break;
@@ -16,6 +17,9 @@ void transition(State **head,State **tail,Event event){
             if(*tail!=*head && (*tail)->type!=type_finish){
                 state_init(*tail);
                 (*tail)--;
+                printf("回退操作成功\n");
+            } else{
+                printf("回退失败\n");
             }
             break;
         case event_stay:
@@ -76,6 +80,9 @@ Event handleState(State **state){
 }
 
 int main(){
+    SetConsoleCP(65001);
+    SetConsoleOutputCP(65001);
+
     State process[500];
     State *head = process;
     state_init(head);
@@ -180,12 +187,12 @@ void buy_update_state(char *input,State *tail){
     if((int )*input >=65 && (int )*input <=90){
         name = (int )*input;
     }else{
-        printf("名称错误");
+        printf("名称错误!\n");
         return;
     }
     input++;
     if(*input != ' '){
-        printf("格式错误!");
+        printf("格式错误!\n");
         return;
     }
     input++;
@@ -235,12 +242,12 @@ void add_to_state(char *input,State *tail){
     if((int )*input >=65 && (int )*input <=90){
         name = (int )*input;
     }else{
-        printf("名称错误");
+        printf("名称错误!\n");
         return;
     }
     input++;
     if(*input != ' '){
-        printf("格式错误!");
+        printf("格式错误!\n");
         return;
     }
     input++;

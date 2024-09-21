@@ -1,8 +1,8 @@
 #include "io.h"
 
 void setGBK(){
-    SetConsoleCP(936);
-    SetConsoleOutputCP(936);
+    SetConsoleCP(65001);
+    SetConsoleOutputCP(65001);
 }
 
 int input_i(int * in){
